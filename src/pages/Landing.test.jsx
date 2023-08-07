@@ -1,11 +1,14 @@
-import { describe, it, expect } from "vitest";
+import { describe, it } from "vitest";
+import { render, screen } from "@testing-library/react";
 
-describe("something truthy and falsy", () => {
-  it("true to be true", () => {
-    expect(true).toBe(true);
-  });
+import { Landing } from "./Landing";
 
-  it("false to be false", () => {
-    expect(false).toBe(false);
+describe("Landing", () => {
+  it("renders Landing", () => {
+    render(<Landing />);
+
+    screen.debug();
+
+    // check if App components renders headline
   });
 });
