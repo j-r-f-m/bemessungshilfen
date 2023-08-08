@@ -3,7 +3,6 @@ import InputGroup from "react-bootstrap/InputGroup";
 import { useForm } from "react-hook-form";
 import Button from "react-bootstrap/Button";
 import Accordion from "react-bootstrap/Accordion";
-import { useCallback, useRef, useEffect } from "react";
 import { MathJax } from "better-react-mathjax";
 import {
   maxNumBars,
@@ -11,6 +10,7 @@ import {
   sMin,
 } from "../../calculations/maxNumberBars/maxNumberBars";
 import useAutoFocus from "../../hooks/Autofocus";
+import { PropTypes } from "prop-types";
 
 export function BrForm(props) {
   //const [result, setResult] = useState({ nStäbe: null });
@@ -239,3 +239,8 @@ export function BrForm(props) {
     </>
   );
 }
+
+BrForm.propTypes = {
+  data: PropTypes.object,
+  setDataChild: PropTypes.func,
+};
