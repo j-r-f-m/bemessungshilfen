@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Landing } from "./pages/Landing";
 import { Navigation } from "./components/Navigation";
 import { BeamReinforcement } from "./pages/BeamReinforcement/BeamReinforcement";
+import { AnchorageLength } from "./pages/AnchorageLength/AnchorageLength";
 import { MathJaxContext } from "better-react-mathjax";
 
 // defining config for MathJax
@@ -31,7 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/balkenBewehrung" element={<BeamReinforcement />} />
-          {/* <Route path="/anchorageLength" element={<AnchorageLength />} /> */}
+          <Route path="/anchorageLength" element={<AnchorageLength />} />
         </Routes>
       </MathJaxContext>
     </>
