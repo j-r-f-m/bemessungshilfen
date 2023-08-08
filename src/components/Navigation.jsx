@@ -10,7 +10,7 @@ export function Navigation() {
         <Container>
           <Nav className="me-auto">
             <Navbar.Brand to="/" as={NavLink} href="#home">
-              Statik Vorlagen
+              Bemessungshilfen
             </Navbar.Brand>
           </Nav>
         </Container>
