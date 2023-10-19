@@ -1,5 +1,6 @@
 import Accordion from "react-bootstrap/Accordion";
 import ListGroup from "react-bootstrap/ListGroup";
+import Image from "react-bootstrap/Image";
 
 export function BrGeneralInfo() {
   return (
@@ -10,18 +11,22 @@ export function BrGeneralInfo() {
           <ListGroup as="ol">
             <ListGroup.Item
               as="li"
-              className="d-flex justify-content-between align-items-start"
+              className="d-flex justify-content-center align-items-start"
             >
-              <div className="ms-2 me-auto">
+              {/*               <div className="ms-2 me-auto">
                 <div className="fw-bold">Verankerung am Endauflager</div>
                 Am frei drehbaren oder schwach eingespannten Endauflager muss
                 eine Bewehrung zur Aufnahme der Randzugkraft ausreichend
                 verankert sein. <br />
                 Fsd,R = VEd · (al / z) + NEd ≥ VEd / 2 <br />
-              </div>
+              </div> */}
+              <Image
+                style={{ maxWidth: "55rem" }}
+                src="./imgs/stb-querschnitt-stäbe.png"
+              />
             </ListGroup.Item>
 
-            <ListGroup.Item
+            {/*             <ListGroup.Item
               as="li"
               className="d-flex justify-content-between align-items-start"
             >
@@ -66,7 +71,7 @@ export function BrGeneralInfo() {
                 vorhandene Gurtbreite bi darf dabei für die Bewehrungsverteilung
                 ausgenutzt werden.
               </div>
-            </ListGroup.Item>
+            </ListGroup.Item> */}
           </ListGroup>
         </Accordion.Body>
       </Accordion.Item>

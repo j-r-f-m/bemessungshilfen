@@ -1,6 +1,7 @@
 import Accordion from "react-bootstrap/Accordion";
 import ListGroup from "react-bootstrap/ListGroup";
 import { MathJax } from "better-react-mathjax";
+import PropTypes from "prop-types";
 
 export function BrOutput(props) {
   console.log(props.data.data.b);
@@ -75,12 +76,33 @@ export function BrOutput(props) {
               >
                 <div className="ms-2 me-auto">
                   <div className="fw-bold">
-                    Berechnung der maximalen Zahl &rdquo;n&rdquo; der Stäbe imr
+                    Maximalen Zahl &rdquo;n&rdquo; der Stäbe im
                     Balkenquerschnitt
                   </div>
-                  <MathJax>
+                  {/*                   <MathJax>
                     {`\\(n=Ganzzahl \\left[ \\frac{b \\ - \\ c_{nom,a} \\ - \\ c_{nom,i} \\ - \\ 2 \\ \\cdot \\ \\theta_{Bü} \\ - \\ (1-\\frac{1}{\\sqrt{2}}) \\cdot D_{Bü}\\ - \\ \\frac{1}{\\sqrt{2}} \\cdot \\ \\theta \\ - \\ \\theta \\ - \\ s_{min} }{\\theta \\ + \\ s_{min}}  \\right] \\ + \\ 2 =  \\)`}
+                    {`\\(Term \\ 1 = b \\ - \\ c_{nom,a} \\ - \\ c_{nom,i} \\ - \\ 2 \\ \\cdot \\ \\theta_{Bü} \\ - \\ (1-\\frac{1}{\\sqrt{2}}) \\cdot D_{Bü}\\ - \\ \\frac{1}{\\sqrt{2}} \\cdot \\ \\theta \\ - \\ \\theta \\ - \\ s_{min}\\)`}
+                    {`\\(Term \\ 2 = - \\ 2 \\ \\cdot \\ \\theta_{Bü} \\)`}
+                    {`\\(n=Ganzzahl \\left[ \\frac{Term \\ 1 \\ - \\ Term \\ 2}{Term 3}  \\right] \\ + \\ 2 =  \\)`}
                     &nbsp; {props.data.data.n}
+                  </MathJax> */}
+                  <MathJax>
+                    {`\\(Term \\ 1 = b \\ - \\ c_{nom,a} \\ - \\ c_{nom,i} \\)`}
+                  </MathJax>
+                  <MathJax>
+                    {`\\(Term \\ 2 = - \\ 2 \\ \\cdot \\ \\theta_{Bü} \\ - \\ (1-\\frac{1}{\\sqrt{2}}) \\cdot D_{Bü}\\)`}
+                  </MathJax>
+                  <MathJax>
+                    {`\\(Term \\ 3 =  - \\ \\frac{1}{\\sqrt{2}} \\cdot \\ \\theta \\ - \\ \\theta \\ - \\ s_{min}\\)`}
+                  </MathJax>
+                  <MathJax>
+                    {`\\(Term \\ 4 = \\theta \\ + \\ s_{min}\\)`}
+                  </MathJax>
+                  <MathJax>
+                    {`\\(n=Ganzzahl\\left[ \\frac{Term \\ 1 + Term \\ 2 + Term \\ 3 }{Term \\ 4}  \\right]+2\\)`}{" "}
+                  </MathJax>
+                  <MathJax>
+                    {`\\(n=\\)`}&nbsp; {props.data.data.n}
                   </MathJax>
                 </div>
                 <div className="mt-2">
@@ -100,3 +122,15 @@ export function BrOutput(props) {
     </>
   );
 }
+
+BrOutput.propTypes = {
+  data: PropTypes.object,
+  b: PropTypes.number,
+  cNomA: PropTypes.number,
+  cNomI: PropTypes.number,
+  thetaBügel: PropTypes.number,
+  theta: PropTypes.number,
+  dMin: PropTypes.number,
+  sMin: PropTypes.number,
+  n: PropTypes.number,
+};

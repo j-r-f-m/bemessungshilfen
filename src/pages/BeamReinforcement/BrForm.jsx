@@ -41,7 +41,7 @@ export function BrForm(props) {
     );
 
     const calculatedDmin = dMin(iptTheta);
-    const calculatedSmin = sMin(iptTheta);
+    const calculatedSmin = sMin(iptThetaBügel);
 
     console.log("hi");
     console.log(calculatedN);

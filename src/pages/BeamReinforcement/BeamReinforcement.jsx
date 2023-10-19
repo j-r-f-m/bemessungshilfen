@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/Container";
 import { useState } from "react";
-import Image from "react-bootstrap/Image";
+/* import Image from "react-bootstrap/Image"; */
 import { BrGeneralInfo } from "./BrGeneralInfo";
 import { BrCalculationInfo } from "./BrCalculationInfo";
 import { BrForm } from "./BrForm";
@@ -57,11 +57,11 @@ export function BeamReinforcement() {
     <Container className="d-flex align-items-center justify-content-center flex-column mt-5">
       <h1>Balken Bewehrung</h1>
       <BrGeneralInfo />
-      <h3 className="mt-4">Maximale Anzahl an Stäben </h3>
-      <Image
+      {/* <h3 className="mt-4">Maximale Anzahl an Stäben </h3> */}
+      {/*       <Image
         style={{ maxWidth: "55rem" }}
         src="./imgs/stb-querschnitt-stäbe.png"
-      />
+      /> */}
       <BrCalculationInfo />
       <BrForm setDataChild={setDataChild} data={data} />
       <BrOutput data={data} />
