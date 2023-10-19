@@ -4,7 +4,7 @@ import Image from "react-bootstrap/Image";
 
 export function BrGeneralInfo() {
   return (
-    <Accordion style={{ width: "100%" }}>
+    <Accordion style={{ width: "100%" }} className="mb-3">
       <Accordion.Item eventKey="0">
         <Accordion.Header>Allgemeine Konstruktionshinweise</Accordion.Header>
         <Accordion.Body className="p-0">
