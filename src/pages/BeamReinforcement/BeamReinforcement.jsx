@@ -7,6 +7,7 @@ import { BrForm } from "./BrForm";
 import { BrOutput } from "./BrOutput";
 
 export function BeamReinforcement() {
+  // object containing calculation data
   const [data, setData] = useState({
     data: {
       b: 0,
