@@ -220,7 +220,7 @@ export function AlForm(props) {
                       })}
                     />
                     <InputGroup.Text id="basic-addon1">
-                      <MathJax>{"\\([cm] \\)"}</MathJax>
+                      <MathJax>{"\\([cm²] \\)"}</MathJax>
                     </InputGroup.Text>
                   </InputGroup>
                   {errors.asErf && (
@@ -247,7 +247,7 @@ export function AlForm(props) {
                       })}
                     />
                     <InputGroup.Text id="basic-addon1">
-                      <MathJax>{"\\([cm] \\)"}</MathJax>
+                      <MathJax>{"\\([cm²] \\)"}</MathJax>
                     </InputGroup.Text>
                   </InputGroup>
                   {errors.asVor && (
