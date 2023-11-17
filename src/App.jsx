@@ -27,6 +27,7 @@ const config = {
 function App() {
   return (
     <>
+      {/* test change -> can be deleted any time */}
       <MathJaxContext version={3} config={config}>
         <Navigation />
         <Routes>
