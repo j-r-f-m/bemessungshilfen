@@ -33,7 +33,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/balkenBewehrung" element={<BeamReinforcement />} />
           <Route path="/anchorageLength" element={<AnchorageLength />} />
-        </Routes> */}
+        </Routes> */}{" "}
         <AnchorageLength />
       </MathJaxContext>
     </>
